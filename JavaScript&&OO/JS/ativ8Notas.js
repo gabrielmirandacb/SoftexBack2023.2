@@ -3,6 +3,7 @@
 var notas = 0;
 var qtdNotas = parseInt(prompt("Digite a quantidade de notas que deseja inserir: "));
 var resultado, nota;
+var mediaAprovacao = 7;
 
 //criação de sistema de repetição para o usuário inserir as notas
 for (let index = 0; index < qtdNotas ; index++) {
@@ -11,7 +12,7 @@ for (let index = 0; index < qtdNotas ; index++) {
 }
 
 //chamando a funçao e imprimindo
-resultado = (calcularMedia(notas) >= 7)? "Passou!":"Reprovou!"
+resultado = (calcularMedia(notas) >= mediaAprovacao)? "Passou!":"Reprovou!"
 alert(resultado);
 
 //criação de função
@@ -25,6 +26,7 @@ function calcularMedia (media){
 var notas = 0;
 var qtdNotas = parseInt(prompt("Digite a quantidade de notas que deseja inserir: "));
 var nota;
+var mediaAprovacao = 7;
 
 //criação de sistema de repetição para o usuário inserir as notas
 for (let index = 0; index < qtdNotas ; index++) {
@@ -36,7 +38,7 @@ for (let index = 0; index < qtdNotas ; index++) {
 calcularNota(notas);
 
 //criação de função
-function calcularNota(media) {
-    var resultado = (7*(qtdNotas+1))- media;
+function calcularNota(not) {
+    var resultado = (mediaAprovacao*(qtdNotas+1))- not;
     return alert(`Nota Necessária para passar = ${resultado}`);
 }

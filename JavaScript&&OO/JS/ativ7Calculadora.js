@@ -26,6 +26,7 @@ do {
             throw new Error("Número inválido!");
         }
     } catch (erro) {
+        condicao = true;
         alert(erro)
     }
 } while (condicao) {
@@ -52,11 +53,16 @@ function opcao(op) {
 }
 //Criação de funções de operações 
 function soma(num1, num2) {
+    if(!isNaN(num1) && !isNaN(num2) ){
     som = num1 + num2;
     return alert(`Resultado da Soma = ${som}`);
+}else{
+    throw new Error("Número inválido!");
+}
 }
 
 function subtracao(num1, num2) {
+    if(!isNaN(num1) && !isNaN(num2) ){
     if (num1 < num2) {
         sub = num2 - num1;
         return alert(`Resultado da Subtração = ${sub}`);
@@ -64,11 +70,18 @@ function subtracao(num1, num2) {
         sub = num1 - num2;
         return alert(`Resultado da Subtração = ${sub}`);
     }
+}else{
+    throw new Error("Número inválido!");
+}
 }
 
 function multiplicacao(num1, num2) {
-    mult = num1 * num2;
-    return alert(`Resultado da Multiplicação = ${mult}`);
+    if(!isNaN(num1) && !isNaN(num2) ){
+        mult = num1 * num2;
+        return alert(`Resultado da Multiplicação = ${mult}`);
+    }else {
+        throw new Error("Número inválido!");
+    }    
 }
 
 function divisao(num1, num2) {

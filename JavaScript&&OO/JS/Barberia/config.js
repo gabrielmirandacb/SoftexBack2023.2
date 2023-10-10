@@ -3,7 +3,7 @@
 module.exports = {
     development: {
         username : 'root',
-        password : '199614cb',
+        password : '*******',
         database :  'revival',
         host : 'localhost',
         dialect : 'mysql'

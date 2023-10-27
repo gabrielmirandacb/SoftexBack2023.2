@@ -49,7 +49,7 @@ interface Computer {
     }
   
     toString(): string {
-      return `PC: RAM=${this.ram}GB, HDD=${this.hdd}GB, CPU=${this.cpu}GHz`;
+      return `PC: RAM=${this.ram}GB, HD=${this.hdd}GB, CPU=${this.cpu}GHz`;
     }
   }
   
@@ -83,12 +83,12 @@ interface Computer {
     }
   
     toString(): string {
-      return `Server: RAM=${this.ram}GB, HDD=${this.hdd}GB, CPU=${this.cpu}GHz`;
+      return `Server: RAM=${this.ram}GB, HD=${this.hdd}GB, CPU=${this.cpu}GHz`;
     }
   }
   
   // Exemplo de uso
-  const pc = ComputerFactory.createComputer("pc", 8, 512, 3.4);
+  const pc = ComputerFactory.createComputer("pc", 8, 1000, 1.8);
   const server = ComputerFactory.createComputer("server", 32, 1024, 2.2);
   
   if (pc && server) {

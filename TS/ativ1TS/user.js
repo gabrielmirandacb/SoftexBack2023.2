@@ -59,12 +59,12 @@ var Server = /** @class */ (function () {
         return this.type;
     };
     Server.prototype.toString = function () {
-        return "Server: RAM=".concat(this.ram, "GB, HDD=").concat(this.hdd, "GB, CPU=").concat(this.cpu, "GHz");
+        return "Server: RAM=".concat(this.ram, "GB, HD=").concat(this.hdd, "GB, CPU=").concat(this.cpu, "GHz");
     };
     return Server;
 }());
 // Exemplo de uso
-var pc = ComputerFactory.createComputer("pc", 8, 512, 3.4);
+var pc = ComputerFactory.createComputer("pc", 8, 1000, 1.8);
 var server = ComputerFactory.createComputer("server", 32, 1024, 2.2);
 if (pc && server) {
     console.log(pc.toString());

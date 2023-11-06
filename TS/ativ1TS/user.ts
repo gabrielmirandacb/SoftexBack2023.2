@@ -49,7 +49,7 @@ interface Computer {
     }
   
     toString(): string {
-      return `PC: RAM=${this.ram}GB, HD=${this.hdd}GB, CPU=${this.cpu}GHz`;
+      return `PC: RAM=${this.ram}GB, HDD=${this.hdd}GB, CPU=${this.cpu}GHz`;
     }
   }
   

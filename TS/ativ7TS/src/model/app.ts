@@ -1,20 +1,16 @@
-import { TextEditor } from "./txtEditor";
+import { Cliente } from "./cliente";
+import { Loja } from "./loja";
+import { Observer } from "./observer";
 
-const textEditor = new TextEditor();
+var gabriel = new Cliente("Gabriel Maciel", "gabrielmaciel@gmail.com");
+var rodrigo = new Cliente("Rodrigo Duarte", "rodrigo@gmail.com");
+var thiago = new Cliente("Thiago Jomar", "thiagojomar@gmail.com");
 
-textEditor.open();
+var nadjaImports = new Loja("Nadja Imports", "Muamba");
 
-// Simulando a inserção de linhas pelo usuário
-textEditor.insertLine(1, "Primeira linha");
-textEditor.insertLine(2, "Segunda linha");
-textEditor.insertLine(3, "Terceira linha");
+Observer.addCliente(gabriel);
+Observer.addCliente(rodrigo);
+Observer.addCliente(thiago);
 
-// Simulando a remoção da segunda linha
-textEditor.removeLine(2);
-
-// Simulando o término da edição pelo usuário
-textEditor.save();
-
-// Exibindo o conteúdo do editor após as operações
-console.log("Conteúdo do editor:");
-console.log(textEditor.getLines().join("\n"));
+nadjaImports.publicarNovoProduto("Iphone 15 Pro Max 512gb - R$15.000,00");
+nadjaImports.publicarNovoProduto("Iphone 15 512gb - R$10.000,00");

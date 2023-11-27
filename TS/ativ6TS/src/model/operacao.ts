@@ -6,10 +6,10 @@ import { Multiplicacao } from "./multiplicacao";
 const prompt = require('readline-sync');
 
 export function operacao(): Strategy {
-    console.log(`Operacoes:`);
+    console.log(`Operações:`);
     console.log(`1 - Soma;`);
-    console.log(`2 - Subtracao;`);
-    console.log(`3 - Multiplicacao.`);
+    console.log(`2 - Subtração;`);
+    console.log(`3 - Multiplicação.`);
 
     const opcao = prompt.questionInt(`Digite o numero da operacao que desejada: `);
 
@@ -21,6 +21,6 @@ export function operacao(): Strategy {
         case 3:
             return new Multiplicacao();
         default:
-            throw new Error(`Operacao invalida`);
+            throw new Error(`Operação inválida`);
     }
 }
